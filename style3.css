@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 70vw;
+    height: 1000px;
+    margin: 10px 15vw;
+    background-color: floralwhite;
+}
+
+p{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-family: "Century Gothic";
+}
+
+#blockOne, #blockTwo, #blockThree{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-color: white;
+    clear: both;
+}
+
+.text, .img{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.text{
+    float: left;
+    background-color: wheat;
+}
+
+.img{
+    float: right;
+    overflow: hidden;
+    background-color: white;
+}
+
+#blockTwo .text{
+    float: right;
+}
+
+#blockTwo .img{
+    float: left;
+}
+
+#blockOne img{
+    transform: translateY(-25px);
+}
+
+
+
+#blockOne:hover, #blockTwo:hover, #blockThree:hover{
+    animation: aniOne 0.3s forwards linear;
+}
+
+#blockOne:hover img{
+    animation: aniTwo 1s forwards linear;
+}
+
+#blockTwo:hover img, #blockThree:hover img{
+    animation: aniTwoTwo 1s forwards linear;
+}
+
+@keyframes aniOne {
+    from{
+
+    }
+    to{
+       filter: brightness(50%);
+    }
+}
+
+@keyframes aniTwo {
+    from{
+
+    }
+    to{
+        transform: scale(1.2) translateY(-25px);
+    }
+}
+
+@keyframes aniTwoTwo {
+    from{
+
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
